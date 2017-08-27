@@ -123,6 +123,9 @@ Rails.application.configure do
     'X-Content-Type-Options' => 'nosniff',
     'X-XSS-Protection'       => '0',
     'Permissions-Policy'     => 'interest-cohort=()',
+    'Content-Security-Policy' => "frame-ancestors 'none'; object-src 'none'; script-src 'self' https://static.glitch.social; base-uri 'none';" , 
+    'Referrer-Policy'         => 'no-referrer, strict-origin-when-cross-origin',
+    'Strict-Transport-Security' => 'max-age=63072000; includeSubDomains; preload'
   }
 
   config.x.otp_secret = ENV.fetch('OTP_SECRET')
