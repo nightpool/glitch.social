@@ -280,6 +280,8 @@ Rails.application.routes.draw do
         end
       end
 
+      get '/streaming/*stuff', to: 'streaming#index'
+
       get '/search', to: 'search#index', as: :search
 
       resources :follows,      only: [:create]
