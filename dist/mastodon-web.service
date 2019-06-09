@@ -1,11 +1,11 @@
 [Unit]
-Description=mastodon-web
+Description=glitch.social-web
 After=network.target
 
 [Service]
 Type=simple
 User=mastodon
-WorkingDirectory=/home/mastodon/live
+WorkingDirectory=/home/mastodon/glitch.social
 Environment="RAILS_ENV=production"
 Environment="PORT=3000"
 ExecStart=/home/mastodon/.rbenv/shims/bundle exec puma -C config/puma.rb
